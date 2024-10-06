@@ -3,13 +3,13 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "r
 
 // Sample data for the chart
 const data = [
-  { demand: 10, nasa: 50, sentinel: 30, sport: 100, rainfall: 80 },
-  { demand: 50, nasa: 100, sentinel: 120, sport: 150, rainfall: 110 },
-  { demand: 100, nasa: 150, sentinel: 100, sport: 200, rainfall: 130 },
-  { demand: 150, nasa: 200, sentinel: 180, sport: 250, rainfall: 180 },
-  { demand: 200, nasa: 220, sentinel: 200, sport: 280, rainfall: 240 },
-  { demand: 250, nasa: 300, sentinel: 250, sport: 300, rainfall: 290 },
-  { demand: 300, nasa: 350, sentinel: 300, sport: 320, rainfall: 330 },
+  { demand: 10, nasa: 75, sentinel: 0.3, sport: 2.5, rainfall: 75 },
+  { demand: 50, nasa: 34, sentinel: 0.4, sport: -2, rainfall: 55 },
+  { demand: 100, nasa: 11, sentinel: 0.6, sport: 1.45, rainfall: 30 },
+  { demand: 150, nasa: 50, sentinel: 0.23, sport: 1.9, rainfall: 23 },
+  { demand: 200, nasa: 4, sentinel: 0.18, sport: -1.2, rainfall: 5 },
+  { demand: 250, nasa: 26, sentinel: 0.28, sport: 0.4, rainfall: 15 },
+  { demand: 300, nasa: 0, sentinel: 0.325, sport: -0.9, rainfall: 0 },
 ];
 
 const WaterChart = () => {
@@ -19,7 +19,7 @@ const WaterChart = () => {
         <h2 className="text-xl font-semibold text-center mb-4">Water-Related Data</h2>
         <LineChart width={900} height={400} data={data}>
           <XAxis dataKey="demand" label={{ value: "Demand (Rate/Kg)", position: "insideBottomRight", offset: -10 }} />
-          <YAxis domain={[0, 350]} label={{ value: "Value", angle: -90, position: "insideLeft" }} />
+          <YAxis domain={[0, 340]} label={{ value: "Value", angle: -90, position: "insideLeft" }} />
           <CartesianGrid strokeDasharray="3 3" />
           <Tooltip />
           <Legend verticalAlign="top" />
