@@ -19,7 +19,7 @@ const WaterChart = () => {
         <h2 className="text-xl font-semibold text-center mb-4">Water-Related Data</h2>
         <LineChart width={900} height={400} data={data}>
           <XAxis dataKey="demand" label={{ value: "Demand (Rate/Kg)", position: "insideBottomRight", offset: -10 }} />
-          <YAxis domain={[0, 340]} label={{ value: "Value", angle: -90, position: "insideLeft" }} />
+          <YAxis domain={[-4, 80]} label={{ value: "Value", angle: -90, position: "insideLeft" }} />
           <CartesianGrid strokeDasharray="3 3" />
           <Tooltip />
           <Legend verticalAlign="top" />
