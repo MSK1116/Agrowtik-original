@@ -2,13 +2,13 @@ import React from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 
 const soilData = [
-  { demand: 10, usdSMAP: 80, subSurface: 90, subSurfaceAnomaly: 50, surface: 100, surfaceAnomaly: 60 },
-  { demand: 50, usdSMAP: 150, subSurface: 120, subSurfaceAnomaly: 80, surface: 130, surfaceAnomaly: 100 },
-  { demand: 100, usdSMAP: 180, subSurface: 200, subSurfaceAnomaly: 120, surface: 170, surfaceAnomaly: 140 },
-  { demand: 150, usdSMAP: 210, subSurface: 220, subSurfaceAnomaly: 160, surface: 210, surfaceAnomaly: 170 },
-  { demand: 200, usdSMAP: 250, subSurface: 250, subSurfaceAnomaly: 180, surface: 240, surfaceAnomaly: 190 },
-  { demand: 250, usdSMAP: 280, subSurface: 280, subSurfaceAnomaly: 200, surface: 290, surfaceAnomaly: 220 },
-  { demand: 300, usdSMAP: 320, subSurface: 310, subSurfaceAnomaly: 240, surface: 330, surfaceAnomaly: 250 },
+  { demand: 10, usdSMAP: 1, subSurface: 2, subSurfaceAnomaly: 2.5, surface: 2, surfaceAnomaly: 3.9 },
+  { demand: 50, usdSMAP: 35, subSurface: 50, subSurfaceAnomaly: 1.5, surface: 12, surfaceAnomaly: 1.75 },
+  { demand: 100, usdSMAP: 90, subSurface: 70, subSurfaceAnomaly: -2.2, surface: 23, surfaceAnomaly: -2.5 },
+  { demand: 150, usdSMAP: 73, subSurface: 35, subSurfaceAnomaly: -1.8, surface: 21, surfaceAnomaly: 1.4 },
+  { demand: 200, usdSMAP: 15, subSurface: 18, subSurfaceAnomaly: -0.25, surface: 9, surfaceAnomaly: -1.2 },
+  { demand: 250, usdSMAP: 110, subSurface: 110, subSurfaceAnomaly: 0.65, surface: 25, surfaceAnomaly: 0.8 },
+  { demand: 300, usdSMAP: 102, subSurface: 104, subSurfaceAnomaly: 0.1, surface: 22, surfaceAnomaly: 0.1 },
 ];
 
 const SoilChart = () => {
@@ -17,8 +17,8 @@ const SoilChart = () => {
       <div className="bg-white w-full shadow-lg rounded-lg p-4 hover:shadow-2xl transition duration-500 ease-in-out transform hover:scale-105">
         <h2 className="text-xl font-semibold text-center mb-4">Soil-Related Data</h2>
         <LineChart width={900} height={400} data={soilData}>
-          <XAxis dataKey="demand" label={{ value: "Demand (Rate/Kg)", position: "insideBottomRight", offset: -10 }} />
-          <YAxis domain={[0, 350]} label={{ value: "Value", angle: -90, position: "insideLeft" }} />
+          <XAxis dataKey="demand" />
+          <YAxis domain={[0, 120]} label={{ value: "Value", angle: -90, position: "insideLeft" }} />
           <CartesianGrid strokeDasharray="3 3" />
           <Tooltip />
           <Legend verticalAlign="top" />
