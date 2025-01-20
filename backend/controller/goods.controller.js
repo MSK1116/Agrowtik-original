@@ -26,20 +26,21 @@ export const postGoods = async (req, res) => {
 export const getUserPost = async (req, res) => {
   try {
     const { id } = req.body;
-    const goods = await Goods.find({ id: id }); // Make sure this is correct
+    const goods = await Goods.find({ id: id });
     return res.status(200).json(goods);
   } catch (error) {
-    console.error("Error fetching goods:", error); // More descriptive logging
-    res.status(500).json({ message: "Server Error", error: error.message }); // Send back a clearer error message
+    console.error("Error fetching goods:", error);
+    res.status(500).json({ message: "Server Error", error: error.message });
   }
 };
+
 export const getPost = async (req, res) => {
   try {
-    const goods = await Goods.find(); // Make sure this is correct
+    const goods = await Goods.find();
     return res.status(200).json(goods);
   } catch (error) {
-    console.error("Error fetching goods:", error); // More descriptive logging
-    res.status(500).json({ message: "Server Error", error: error.message }); // Send back a clearer error message
+    console.error("Error fetching goods:", error);
+    res.status(500).json({ message: "Server Error", error: error.message });
   }
 };
 

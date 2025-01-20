@@ -18,7 +18,7 @@ const SoilChart = () => {
         <h2 className="text-xl font-semibold text-center mb-4">Soil-Related Data</h2>
         <LineChart width={900} height={400} data={soilData}>
           <XAxis dataKey="demand" />
-          <YAxis domain={[0, 120]} label={{ value: "Value", angle: -90, position: "insideLeft" }} />
+          <YAxis domain={[0, 200]} label={{ value: "Value", angle: -90, position: "insideLeft" }} />
           <CartesianGrid strokeDasharray="3 3" />
           <Tooltip />
           <Legend verticalAlign="top" />

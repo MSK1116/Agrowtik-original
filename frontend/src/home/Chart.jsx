@@ -1,6 +1,7 @@
 import React from "react";
 import WaterChart from "../component/WaterChart";
 import SoilChart from "../component/SoilChart";
+import CropsChart from "../component/CropsChart";
 
 const Chart = () => {
   return (
@@ -9,6 +10,7 @@ const Chart = () => {
         <div className="p-2  border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
           <WaterChart />
           <SoilChart />
+          <CropsChart />
         </div>
       </div>
     </>
