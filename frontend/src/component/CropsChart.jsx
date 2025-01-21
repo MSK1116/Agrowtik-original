@@ -42,9 +42,9 @@ const CropsPriceChart = () => {
   // Prepare chart data
   const chartData = Object.entries(sortGoods).map(([goods, bids]) => {
     return bids.map((bid, index) => ({
-      goods, // Name of the goods
-      bidAmount: bid.amount || bid, // Support for both object bids and numeric bids
-      index, // Use the index as X-axis
+      goods,
+      bidAmount: bid.amount || bid,
+      index,
     }));
   });
 
